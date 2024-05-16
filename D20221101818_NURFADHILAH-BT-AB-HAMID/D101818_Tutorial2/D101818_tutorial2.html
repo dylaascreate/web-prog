@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Tutorial 2</title>
+    <style>
+        /* CSS */
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color: #f4f4f4; */
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+            background-image: url("https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 600px;
+            margin: 20px;
+        }
+
+        .required {
+            color: red;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+        margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: calc(50% - 5px);
+            box-sizing: border-box;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            }
+
+        #new-section input,
+        #new-section select {
+            width: calc(100% - 5px);
+            box-sizing: border-box;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            }
+
+        #new-section input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center; color:white;"> HTML Tutorial 2 </h1>
+    <!-- FORM -->
+    <form action="/submit-form" method="post">
+        <fieldset>
+            <legend>Submit form:</legend>
+            
+            <label for="fullname">Full Name:<span class="required">*</span></label>
+            <div class="form-group">
+                <input placeholder="First Name" type="text" id="fname" name="fname" required>
+                <input placeholder="Last Name" type="text" id="lname" name="lname" required>
+            </div>
+
+            <label for="road">Address:<span class="required">*</span></label>
+            <div class="form-group">
+                <input placeholder="Road" type="text" id="road" name="road" required>
+                <input placeholder="Road 2" type="text" id="road2" name="road2">
+            </div>
+
+            <div class="form-group">
+                <input placeholder="Postcode" type="text" id="postcode" name="postcode" required>
+                <select placeholder="State" id="state" name="state" required>
+                    <option value="state1">SELANGOR</option>
+                    <option value="state2">PERAK</option>
+                    <option value="state3">PENANG</option>
+                </select>
+            </div>
+
+            <label for="email">Email:<span class="required">*</span></label>
+            <div class="form-group" id="new-section">
+                <input placeholder="Email" type="email" id="email" name="email" required>
+            </div>
+
+            <label for="subject">Subject:</label>
+            <div class="form-group" id="new-section">
+            <select placeholder="Subject" id="subject" name="subject">
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+                <option value="others">Others</option>
+            </select>
+            </div>
+
+            <label for="message">Please write your full description here:<span class="required">*</span></label>
+            <div class="form-group" id="new-section">
+                <textarea id="message" name="message" rows="4" cols="74"></textarea>
+            </div>
+            
+            <div class="form-group" id="new-section">
+                <input type="submit" value="Submit">
+            </div>
+        </fieldset>
+
+        <p aria-hidden="true" id="required-description">
+            <span aria-hidden="true" class="required">*</span>Required field
+        </p>
+    </form>
+  
+</body>
+</html>
