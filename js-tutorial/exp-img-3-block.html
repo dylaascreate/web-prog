@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Image 3</title>
+   <style>
+      * {
+      box-sizing: border-box;
+      }
+
+      .row {
+      display: flex;
+      }
+
+      .column {
+      flex: 33.33%;
+      padding: 5px;
+      }
+
+      /* * {
+      box-sizing: border-box;
+      }
+
+      .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+      }
+
+      .row::after {
+      content: "";
+      clear: both;
+      display: table;
+      } */
+   </style>
+</head>
+<body>
+   <h2>Showing image with a click in JavaScript</h2>
+   <!-- Buttons -->
+   <button id="show-image-button">Show Image</button>
+   <button id="show-image-button1">Show Image</button>
+   <button id="show-image-button2">Show Image</button>
+
+   <!-- Display images -->
+   <div class="row">
+      <div class="column">
+         <img id="my-image" src="https://www.tutorialspoint.com/static/images/logo-color.png" style="display: none;">
+      </div>
+      <div class="column">
+         <img id="my-image1" src="https://www.tutorialspoint.com/static/images/logo-color.png" style="display: none;">
+      </div>
+      <div class="column">
+         <img id="my-image2" src="https://www.tutorialspoint.com/static/images/logo-color.png" style="display: none;">
+      </div>
+    </div>
+   
+   <!-- JS -->
+   <script>
+      const showImageButton = document.getElementById("show-image-button");
+      const myImage = document.getElementById("my-image"); 
+      showImageButton.addEventListener("click", () => { 
+         myImage.style.display = "block"; 
+      });
+   </script>
+
+    <script>
+        const showImageButton1 = document.getElementById("show-image-button1");
+        const myImage1 = document.getElementById("my-image1"); 
+        showImageButton1.addEventListener("click", () => { 
+        myImage1.style.display = "block"; 
+        });
+    </script>
+
+    <script>
+        const showImageButton2 = document.getElementById("show-image-button2");
+        const myImage2 = document.getElementById("my-image2"); 
+        showImageButton2.addEventListener("click", () => { 
+        myImage2.style.display = "block"; 
+        });
+    </script>
+</body>
+</html>

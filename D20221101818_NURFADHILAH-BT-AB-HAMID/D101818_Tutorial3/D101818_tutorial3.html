@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 3</title>
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+  
+        .column {
+        float: left;
+        width: 30%;
+        }
+
+        .row {
+        padding-top: 10px;
+        }
+
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+
+        img {
+            width: 430px;
+            height: 280px;
+        }
+
+        .hidden { display: none; }
+        .visible { display: block; }
+     </style>
+</head>
+<body>
+    <h1 style="color:blueviolet;">JavaScript Tutorial 3</h1>
+
+    <!-- My View -->
+    <button id="show-image-button">My View</button>
+
+    <!-- My House -->
+    <button id="show-image-button1">My House</button>
+
+    <!-- My Hobby -->
+    <button id="show-image-button2">My Hobby</button>
+
+    <!-- Date -->
+    <button onclick="this.innerHTML = Date()">Date</button>
+
+    <!-- Print -->
+    <button onclick="window.print()">Print</button>
+
+    <!-- Display images -->
+   <div class="row">
+    <div class="column">
+       <img id="my-image" src="view.png" class="hidden">
+    </div>
+    <div class="column">
+       <img id="my-image1" src="house.png" class="hidden">
+    </div>
+    <div class="column">
+       <img id="my-image2" src="hobby.png" class="hidden">
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+        const showImageButton = document.getElementById("show-image-button");
+        const myImage = document.getElementById("my-image"); 
+        showImageButton.addEventListener("click", () => { 
+        myImage.classList.toggle("visible");
+        });
+    
+        const showImageButton1 = document.getElementById("show-image-button1");
+        const myImage1 = document.getElementById("my-image1"); 
+        showImageButton1.addEventListener("click", () => { 
+        myImage1.classList.toggle("visible");
+        });
+
+        const showImageButton2 = document.getElementById("show-image-button2");
+        const myImage2 = document.getElementById("my-image2"); 
+        showImageButton2.addEventListener("click", () => { 
+        myImage2.classList.toggle("visible");
+        });
+
+        window.onbeforeunload = function() {
+        return "Data will be lost if you leave the page, are you sure?";
+        };
+  </script>
+</body>
+</html>

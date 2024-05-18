@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Image 2</title>
+</head>
+<body>
+   <h1>Showing image with a click in JavaScript</h1>
+   <!-- Buttons -->
+   <button id="show-image-button">Show Image</button>
+   <button id="show-image-button1">Show Image</button>
+   <button id="show-image-button2">Show Image</button>
+
+   <!-- Display images -->
+   <img id="my-image" src="https://www.tutorialspoint.com/javascript/images/javascript.jpg" class="hidden">
+   <img id="my-image1" src="https://www.tutorialspoint.com/javascript/images/javascript.jpg" class="hidden">
+   <img id="my-image2" src="https://www.tutorialspoint.com/javascript/images/javascript.jpg" class="hidden">
+   
+   <!-- open img new tab -->
+   <img src="https://www.tutorialspoint.com/javascript/images/javascript.jpg" onclick="window.open(this.src)">
+
+   <!-- CSS -->
+   <style>
+      .hidden { display: none; }
+      .visible { display: block; }
+   </style>
+
+   <!-- JS -->
+   <script>
+      const showImageButton = document.getElementById("show-image-button");
+      const myImage = document.getElementById("my-image");
+      showImageButton.addEventListener("click", () => { 
+         myImage.classList.toggle("visible"); 
+      });
+   </script>
+
+    <script>
+        const showImageButton1 = document.getElementById("show-image-button1");
+        const myImage1 = document.getElementById("my-image1");
+        showImageButton1.addEventListener("click", () => { 
+        myImage1.classList.toggle("visible"); 
+        });
+    </script>
+
+    <script>
+        const showImageButton2 = document.getElementById("show-image-button2");
+        const myImage2 = document.getElementById("my-image2");
+        showImageButton2.addEventListener("click", () => { 
+        myImage2.classList.toggle("visible"); 
+        });
+    </script>
+</body>
+</html>
